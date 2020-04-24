@@ -9,7 +9,7 @@ LABEL "com.github.actions.color"="black"
 RUN pip install --upgrade pip
 
 # Postgres
-RUN apk add postgresql=11.6-r0
+RUN apk add postgresql
 RUN (addgroup -S postgres && adduser -S postgres -G postgres || true)
 RUN mkdir -p /var/lib/postgresql/data
 RUN mkdir -p /run/postgresql/
