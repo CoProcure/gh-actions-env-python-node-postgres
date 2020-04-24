@@ -1,0 +1,15 @@
+name: CoProcure GitHub Actions Environment - Node, Python, Postgres
+description: ''
+branding:
+  icon: box
+  color: gray-dark
+runs-on: ubuntu-latest
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+steps:
+- uses: actions/checkout@master
+- name: CoProcure GitHub Actions Environment - Node, Python, Postgres
+  uses: coprocure/gh-actions-env-python-node-postgres@master
+  with:
+    args: npm ci
